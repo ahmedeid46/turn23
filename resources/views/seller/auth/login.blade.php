@@ -1,0 +1,119 @@
+@extends('customer.layout.master')
+@section('style')
+    {{-- section style  --}}
+
+@endsection
+@section('script')
+    {{-- section script  --}}
+
+@endsection
+@section('content')
+    {{-- section start content  --}}
+
+    <main class="main">
+        <div class="page-header">
+            <div class="container d-flex flex-column align-items-center">
+                <nav aria-label="breadcrumb" class="breadcrumb-nav">
+                    <div class="container">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('customer.home') }}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Login
+                            </li>
+                        </ol>
+                    </div>
+                </nav>
+
+                <h1>User Login</h1>
+            </div>
+        </div>
+
+        <div class="container login-container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading mb-1">
+                                <h2 class="title">Login</h2>
+                            </div>
+                            @if(Session::has('errors'))
+ 	                            <h5 class="text-danger"> {{Session::get('errors')->first()}} </h5>
+                            @endif
+                           
+
+                            <form method="post" action="{{ route('seller.login') }}">
+                                @csrf
+                                <label for="login-email">
+                                    Username or email address
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="email" name="email" class="form-input form-wide" id="login-email" required />
+
+                                <label for="login-password">
+                                    Password
+                                    <span class="required">*</span>
+                                </label>
+                                <input type="password" name="password" class="form-input form-wide" id="login-password" required />
+
+                                <div class="form-footer">
+                                    <div class="custom-control custom-checkbox mb-0">
+                                        <input type="checkbox" name="remember" class="custom-control-input" id="lost-password" />
+                                        <label class="custom-control-label mb-0" for="lost-password">Remember
+                                            me</label>
+                                    </div>
+
+                                    <a href="forgot-password.html"
+                                       class="forget-password text-dark form-footer-right">Forgot
+                                        Password?</a>
+                                </div>
+                                <button type="submit" class="btn btn-dark btn-md w-100">
+                                    LOGIN
+                                </button>
+                                <span>Dont have Account?</span>
+                                <a href="{{ route('customer.show.register') }}"
+                                   class="forget-password text-dark form-footer-right">Register</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main><!-- End .main -->
+
+    @error('email')
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">{{ env('app_name') }}</strong>
+                <small>1 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                {{ $message }}
+            </div>
+        </div>
+    @enderror
+    @error('password')
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">{{ env('app_name') }}</strong>
+            <small>1 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            {{ $message }}
+        </div>
+    </div>
+    @enderror
+    @error('message')
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <strong class="me-auto">{{ env('app_name') }}</strong>
+            <small>1 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            {{ $message }}
+        </div>
+    </div>
+    @enderror
+@endsection

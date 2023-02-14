@@ -1,0 +1,3762 @@
+{
+	"info": {
+		"_postman_id": "8930410d-fbbc-4596-8968-0e189d40b747",
+		"name": "Seller",
+		"description": "StartFragment\n\n# base url : [http://turn.zatech.tech/](https://desktop.postman.com/?desktopVersion=9.22.2&webVersion=9.24.2-ui-220711-0900&userId=17280282&teamId=2420735)\n\nEndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17280282"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "ahmed eid",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ahmed.eid.1@hotmail.co",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "registration_certificate",
+							"type": "file",
+							"src": "/D:/projects/testing files/pdf/pdf-test.pdf"
+						},
+						{
+							"key": "tax_card",
+							"type": "file",
+							"src": "/D:/projects/testing files/pdf/Get_Started_With_Smallpdf.pdf"
+						},
+						{
+							"key": "vat_cert",
+							"type": "file",
+							"src": "/D:/projects/testing files/pdf/dummy.pdf"
+						},
+						{
+							"key": "invoice",
+							"type": "file",
+							"src": "/D:/projects/testing files/img/ben-parker-OhKElOkQ3RE-unsplash.jpg"
+						},
+						{
+							"key": "delegation",
+							"value": "hfherfjrhkfd",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "0100000000",
+							"type": "text"
+						},
+						{
+							"key": "reference_list",
+							"type": "file",
+							"src": "/D:/projects/testing files/img/aatik-tasneem-7omHUGhhmZ0-unsplash.jpg"
+						},
+						{
+							"key": "sub_cat",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "sub_sub_cat[]",
+							"value": "13",
+							"type": "text"
+						},
+						{
+							"key": "sub_sub_cat[]",
+							"value": "16",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/seller/auth/register",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "without data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 May 2022 17:06:02 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 May 2022 17:06:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": [\n        \"The name field is required.\",\n        \"The email field is required.\",\n        \"The password field is required.\",\n        \"The password confirmation field is required.\",\n        \"The registration certificate field is required.\",\n        \"The tax card field is required.\",\n        \"The vat cert field is required.\",\n        \"The invoice field is required.\",\n        \"The delegation field is required.\",\n        \"The phone field is required.\",\n        \"The reference list field is required.\"\n    ]\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ahmed eid",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ahmed.eid.1@hotmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "registration_certificate",
+									"type": "file",
+									"src": "/D:/projects/testing files/pdf/pdf-test.pdf"
+								},
+								{
+									"key": "tax_card",
+									"type": "file",
+									"src": "/D:/projects/testing files/pdf/Get_Started_With_Smallpdf.pdf"
+								},
+								{
+									"key": "vat_cert",
+									"type": "file",
+									"src": "/D:/projects/testing files/pdf/dummy.pdf"
+								},
+								{
+									"key": "invoice",
+									"type": "file",
+									"src": "/D:/projects/testing files/img/ben-parker-OhKElOkQ3RE-unsplash.jpg"
+								},
+								{
+									"key": "delegation",
+									"type": "file",
+									"src": "/D:/projects/testing files/img/download (1).jpg"
+								},
+								{
+									"key": "phone",
+									"value": "0100000000",
+									"type": "text"
+								},
+								{
+									"key": "reference_list",
+									"type": "file",
+									"src": "/D:/projects/testing files/img/aatik-tasneem-7omHUGhhmZ0-unsplash.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 May 2022 17:11:07 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 May 2022 17:11:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": [\n        \"successfully Register check your email to known when admin approve your account\"\n    ],\n    \"data\": \" \"\n}"
+				},
+				{
+					"name": "not upload file",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ahmed eid",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "ahmed.eid.1@hotmail.co",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "registration_certificate",
+									"type": "file",
+									"src": "/D:/projects/testing files/pdf/pdf-test.pdf"
+								},
+								{
+									"key": "tax_card",
+									"type": "file",
+									"src": "/D:/projects/testing files/pdf/Get_Started_With_Smallpdf.pdf"
+								},
+								{
+									"key": "vat_cert",
+									"type": "file",
+									"src": "/D:/projects/testing files/pdf/dummy.pdf"
+								},
+								{
+									"key": "invoice",
+									"type": "file",
+									"src": "/D:/projects/testing files/img/ben-parker-OhKElOkQ3RE-unsplash.jpg"
+								},
+								{
+									"key": "delegation",
+									"value": "hfherfjrhkfd",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0100000000",
+									"type": "text"
+								},
+								{
+									"key": "reference_list",
+									"type": "file",
+									"src": "/D:/projects/testing files/img/aatik-tasneem-7omHUGhhmZ0-unsplash.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/auth/register",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 May 2022 17:12:34 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 May 2022 17:12:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": [\n        \"The delegation must be a file.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"seller@site.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/seller/auth/login",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "not valid email and password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"seller@site.com\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 14 May 2022 11:29:16 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 14 May 2022 11:29:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "60"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": [\n        \"Email and Password are Wrong.\"\n    ]\n}"
+				},
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"seller@site.com\",\r\n    \"password\":\"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 14 May 2022 11:31:04 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 14 May 2022 11:31:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Login Successful\",\n    \"data\": {\n        \"id\": 4,\n        \"name\": \"seller@site.com\",\n        \"email\": \"seller@site.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2022-05-03T19:54:52.000000Z\",\n        \"updated_at\": \"2022-05-03T19:54:52.000000Z\",\n        \"registration_certificate\": \"seller@site.com_1651607692.sql\",\n        \"tax_card\": \"seller@site.com_1651607692.sql\",\n        \"vat_cert\": \"seller@site.com_1651607692.sql\",\n        \"invoice\": \"seller@site.com_1651607692.sql\",\n        \"delgation\": \"seller@site.com_1651607692.sql\",\n        \"phone\": \"1005084569\",\n        \"reference_list\": \"seller@site.com_1651607692.sql\",\n        \"cat_id\": 1,\n        \"token\": {\n            \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3NlbGxlci9hdXRoL2xvZ2luIiwiaWF0IjoxNjUyNTI3ODYzLCJleHAiOjE2NTI1MzE0NjMsIm5iZiI6MTY1MjUyNzg2MywianRpIjoiOHFFZ2dBMGFmbHh5MnZseSIsInN1YiI6IjQiLCJwcnYiOiJlYWU5MDMyOGE5OWYzNDljYjkwMDMwNGUxZjk0ZDdkZjFmYzRkZTAzIn0.y0_EqEZ2ptBbm3dJVnbfgR7OSJyg4glenseilb83rO8\",\n            \"token_type\": \"bearer\",\n            \"expires_in\": 3600\n        }\n    }\n}"
+				},
+				{
+					"name": "login service provider",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"engineer@manpower.com\",\r\n    \"password\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/auth/login",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 21:18:08 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 21:18:08 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"Login Successful\",\n    \"data\": {\n        \"id\": 5,\n        \"name\": \"manpower\",\n        \"email\": \"engineer@manpower.com\",\n        \"email_verified_at\": null,\n        \"created_at\": \"2022-05-06T11:24:23.000000Z\",\n        \"updated_at\": \"2022-05-23T11:38:45.000000Z\",\n        \"registration_certificate\": \"manpower_1651843463.xlsx\",\n        \"tax_card\": \"manpower_1651843463.pdf\",\n        \"vat_cert\": \"manpower_1651843463.pdf\",\n        \"invoice\": \"manpower_1651843463.pdf\",\n        \"delgation\": \"manpower_1651843463.pdf\",\n        \"phone\": \"1005084569\",\n        \"reference_list\": \"manpower_1651843463.pdf\",\n        \"cat_id\": 4,\n        \"status\": 1,\n        \"token\": {\n            \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3NlbGxlci9hdXRoL2xvZ2luIiwiaWF0IjoxNjUzMzQwNjg4LCJleHAiOjE2NTM5NDU0ODgsIm5iZiI6MTY1MzM0MDY4OCwianRpIjoiODVKU2xPdlowbFVnVExLdiIsInN1YiI6IjUiLCJwcnYiOiJlYWU5MDMyOGE5OWYzNDljYjkwMDMwNGUxZjk0ZDdkZjFmYzRkZTAzIn0.UUhScARgzH11A8R8tWzxXx1Xx2FDLVKdhg5c4Js0czw\",\n            \"token_type\": \"bearer\",\n            \"expires_in\": 604800\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "forget/Password Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ahmed.eid.1@hotmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/seller/auth/forget/Password",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"auth",
+						"forget",
+						"Password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset Password Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"ahmed.eid.1@hotmail.com\",\r\n    \"token\":\"98931406\",\r\n    \"password\":\"123456789\",\r\n    \"password_confirmation\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/seller/auth/reset/Password",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"auth",
+						"reset",
+						"Password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "reset Password",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ahmed.eid.1@hotmail.com\",\r\n    \"token\":\"98931406\",\r\n    \"password\":\"123456789\",\r\n    \"password_confirmation\":\"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/customer/auth/reset/Password",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"customer",
+								"auth",
+								"reset",
+								"Password"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 May 2022 20:03:24 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 12 May 2022 20:03:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": [\n        \"password has been successfully reset\"\n    ],\n    \"data\": 200\n}"
+				}
+			]
+		},
+		{
+			"name": "category for rgister",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/seller/auth/register/category",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"auth",
+						"register",
+						"category"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register category",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/auth/register/category",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"auth",
+								"register",
+								"category"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 11:31:14 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 11:31:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"cats\": [\n            {\n                \"id\": 1,\n                \"title\": \"chemical\",\n                \"type_id\": 1,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"sub_cat\": [\n                    {\n                        \"id\": 5,\n                        \"title\": \"sub_cat1\",\n                        \"cat_id\": 1,\n                        \"sub_cat_id\": null,\n                        \"created_at\": null,\n                        \"updated_at\": null,\n                        \"subsubcat\": [\n                            {\n                                \"id\": 9,\n                                \"title\": \"sub_sub_cat1\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 5,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 10,\n                                \"title\": \"sub_sub_cat2\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 5,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 11,\n                                \"title\": \"sub_sub_cat3\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 5,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 12,\n                                \"title\": \"sub_sub_cat4\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 5,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": 6,\n                        \"title\": \"sub_cat2\",\n                        \"cat_id\": 1,\n                        \"sub_cat_id\": null,\n                        \"created_at\": null,\n                        \"updated_at\": null,\n                        \"subsubcat\": [\n                            {\n                                \"id\": 13,\n                                \"title\": \"sub_sub_cat5\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 6,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 16,\n                                \"title\": \"sub_sub_cat8\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 6,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": 7,\n                        \"title\": \"sub_cat3\",\n                        \"cat_id\": 1,\n                        \"sub_cat_id\": null,\n                        \"created_at\": null,\n                        \"updated_at\": null,\n                        \"subsubcat\": [\n                            {\n                                \"id\": 14,\n                                \"title\": \"sub_sub_cat6\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 7,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": 8,\n                        \"title\": \"sub_cat4\",\n                        \"cat_id\": 1,\n                        \"sub_cat_id\": null,\n                        \"created_at\": null,\n                        \"updated_at\": null,\n                        \"subsubcat\": [\n                            {\n                                \"id\": 15,\n                                \"title\": \"sub_sub_cat7\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 8,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"id\": 2,\n                \"title\": \"service provider\",\n                \"type_id\": 1,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"sub_cat\": [\n                    {\n                        \"id\": 39,\n                        \"title\": \"company\",\n                        \"cat_id\": 2,\n                        \"sub_cat_id\": null,\n                        \"created_at\": null,\n                        \"updated_at\": null,\n                        \"subsubcat\": [\n                            {\n                                \"id\": 40,\n                                \"title\": \"mechanical\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 41,\n                                \"title\": \"Electromechanical\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 42,\n                                \"title\": \"inspection &calibration\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 43,\n                                \"title\": \"instrumentation\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 44,\n                                \"title\": \"electrical\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 45,\n                                \"title\": \"civil\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 46,\n                                \"title\": \"architecture\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 47,\n                                \"title\": \"civil &architecture\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 48,\n                                \"title\": \"integrated\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 49,\n                                \"title\": \"HSE\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 50,\n                                \"title\": \"heavy equipment\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 51,\n                                \"title\": \"consultant\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 39,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            }\n                        ]\n                    }\n                ]\n            },\n            {\n                \"id\": 4,\n                \"title\": \"Man Power\",\n                \"type_id\": 2,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"sub_cat\": [\n                    {\n                        \"id\": 17,\n                        \"title\": \"technical\",\n                        \"cat_id\": 4,\n                        \"sub_cat_id\": null,\n                        \"created_at\": null,\n                        \"updated_at\": null,\n                        \"subsubcat\": [\n                            {\n                                \"id\": 19,\n                                \"title\": \"Q.C inspector\\r\\n\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 17,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 20,\n                                \"title\": \"supervisor\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 17,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 21,\n                                \"title\": \"arc welder\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 17,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 22,\n                                \"title\": \"argon welder\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 17,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 23,\n                                \"title\": \"arc/argon welder\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 17,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 24,\n                                \"title\": \"steel welder\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 17,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 25,\n                                \"title\": \"laminator (frp)\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 17,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": 18,\n                        \"title\": \"engineer\",\n                        \"cat_id\": 4,\n                        \"sub_cat_id\": null,\n                        \"created_at\": null,\n                        \"updated_at\": null,\n                        \"subsubcat\": [\n                            {\n                                \"id\": 26,\n                                \"title\": \"site\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 27,\n                                \"title\": \"site manager\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 28,\n                                \"title\": \"projects manager\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 29,\n                                \"title\": \"Q.C\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 30,\n                                \"title\": \"CEO\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 31,\n                                \"title\": \"operation\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 32,\n                                \"title\": \"HSE\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 33,\n                                \"title\": \"MEP\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 34,\n                                \"title\": \"MEP manager\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 35,\n                                \"title\": \"technical office\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 36,\n                                \"title\": \"technical office manager\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 37,\n                                \"title\": \"planning\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            },\n                            {\n                                \"id\": 38,\n                                \"title\": \"maintenance\",\n                                \"cat_id\": null,\n                                \"sub_cat_id\": 18,\n                                \"created_at\": null,\n                                \"updated_at\": null\n                            }\n                        ]\n                    }\n                ]\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "complete register category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3NlbGxlci9hdXRoL2xvZ2luIiwiaWF0IjoxNjU2MzMxMjg4LCJleHAiOjE2NTY5MzYwODgsIm5iZiI6MTY1NjMzMTI4OCwianRpIjoiME5xcDJSb3BzUUJMVkozdiIsInN1YiI6IjQiLCJwcnYiOiJlYWU5MDMyOGE5OWYzNDljYjkwMDMwNGUxZjk0ZDdkZjFmYzRkZTAzIn0.FC_gjjmkdKH-mO_6BAyKAD_X9QDdArEtWGpUxLpsyQs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sub_cat_id\":\"other\",\r\n    \"sub_cat_name\":\"test other\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/seller/add/seller/sub/cat",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"add",
+						"seller",
+						"sub",
+						"cat"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "complete register category",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sub_cat_id\":55\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/add/seller/sub/cat",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"add",
+								"seller",
+								"sub",
+								"cat"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jun 2022 12:46:23 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 27 Jun 2022 12:46:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": [\n        \"your sub Category is Added\"\n    ],\n    \"data\": \" \"\n}"
+				}
+			]
+		},
+		{
+			"name": "category and Products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdmVuZG9yLnphdGVjaC50ZWNoL2FwaS9zZWxsZXIvYXV0aC9sb2dpbiIsImlhdCI6MTY1NDY4NzExMCwiZXhwIjoxNjU1MjkxOTEwLCJuYmYiOjE2NTQ2ODcxMTAsImp0aSI6Ijg4anBMUGRyYzZ2RFRGOEQiLCJzdWIiOiI2IiwicHJ2IjoiZWFlOTAzMjhhOTlmMzQ5Y2I5MDAzMDRlMWY5NGQ3ZGYxZmM0ZGUwMyJ9.NkijTyWgqIxg-GzZN2jVnqrfqOaXsu8i1LjI7os1AUM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://vendor.zatech.tech/api/seller/category",
+					"protocol": "http",
+					"host": [
+						"vendor",
+						"zatech",
+						"tech"
+					],
+					"path": [
+						"api",
+						"seller",
+						"category"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "category",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/category",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"category"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 11:49:37 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 11:49:37 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"cats\": [\n            {\n                \"id\": 1,\n                \"sub_cat_id\": 9,\n                \"seller_id\": 4,\n                \"created_at\": \"2022-05-03T19:54:52.000000Z\",\n                \"updated_at\": \"2022-05-03T19:54:52.000000Z\",\n                \"sub_cat\": {\n                    \"id\": 9,\n                    \"title\": \"sub_sub_cat1\",\n                    \"cat_id\": null,\n                    \"sub_cat_id\": 5,\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"product\": [\n                        {\n                            \"id\": 1,\n                            \"title\": \"product 1\",\n                            \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software and online services. Apple is the largest information technology company by revenue and, since January 2021, the world's most valuable company\",\n                            \"price\": 99.99,\n                            \"sub_cat_id\": 9,\n                            \"seller_id\": 4,\n                            \"created_at\": \"2022-05-05T14:35:58.000000Z\",\n                            \"updated_at\": \"2022-05-05T16:24:11.000000Z\",\n                            \"qty\": \"10 \",\n                            \"packing\": \"Drum\",\n                            \"sample\": \"0\",\n                            \"ProductionData\": \"2022-05-05T16:22\",\n                            \"expirationDate\": \"2022-05-25T16:22\",\n                            \"length\": \"10 mm\",\n                            \"in_out\": null,\n                            \"sch\": \"12\",\n                            \"pressure\": \"132 Bar\",\n                            \"size\": \"123\",\n                            \"brand\": \"fjidjed\",\n                            \"class\": \"131\",\n                            \"moc\": null,\n                            \"material\": \"jisfdjif\",\n                            \"grade\": \"kdokseods\",\n                            \"website\": \"kodks\",\n                            \"flowrate\": \"3564 m3/hr\",\n                            \"content\": \"<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,</p>\\r\\n<p>Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor</p>\\r\\n<p>in REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR. EXCepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\\r\\n<p>&nbsp;</p>\",\n                            \"mods\": null,\n                            \"tds\": \"_1651761358.jpg\",\n                            \"coa\": \"_1651761358.jpg\",\n                            \"docs\": null,\n                            \"cover\": \"_1651761358.jpg\",\n                            \"photos\": \"[\\\"0_1651762300.jpg\\\",\\\"1_1651762300.jpg\\\",\\\"2_1651762300.jpg\\\",\\\"3_1651762300.jpg\\\",\\\"4_1651762300.jpg\\\",\\\"5_1651762300.jpg\\\",\\\"6_1651762300.jpg\\\",\\\"7_1651762300.jpg\\\"]\",\n                            \"dim\": \"10 mm\"\n                        },\n                        {\n                            \"id\": 2,\n                            \"title\": \"product 2\",\n                            \"description\": \"test model test model test model test model test model test model\",\n                            \"price\": 150.73,\n                            \"sub_cat_id\": 9,\n                            \"seller_id\": 4,\n                            \"created_at\": \"2022-05-05T14:51:40.000000Z\",\n                            \"updated_at\": \"2022-05-05T14:51:40.000000Z\",\n                            \"qty\": \"200 \",\n                            \"packing\": \"Drum\",\n                            \"sample\": \"1\",\n                            \"ProductionData\": \"2022-05-05T16:50\",\n                            \"expirationDate\": \"2022-05-05T16:50\",\n                            \"length\": \"100 mm\",\n                            \"in_out\": \"out\",\n                            \"sch\": \"200\",\n                            \"pressure\": \"100 Bar\",\n                            \"size\": \"40000\",\n                            \"brand\": \"jdioasidsx\",\n                            \"class\": \"9873\",\n                            \"moc\": null,\n                            \"material\": \"yruyuer\",\n                            \"grade\": \"jufisdjofds\",\n                            \"website\": \"jfsidjisd\",\n                            \"flowrate\": \"83834 m3/hr\",\n                            \"content\": null,\n                            \"mods\": null,\n                            \"tds\": \"_1651762300.jpg\",\n                            \"coa\": \"_1651762300.jpg\",\n                            \"docs\": null,\n                            \"cover\": \"_1651762300.jpg\",\n                            \"photos\": \"[\\\"0_1651762300.jpg\\\",\\\"1_1651762300.jpg\\\",\\\"2_1651762300.jpg\\\",\\\"3_1651762300.jpg\\\",\\\"4_1651762300.jpg\\\",\\\"5_1651762300.jpg\\\",\\\"6_1651762300.jpg\\\",\\\"7_1651762300.jpg\\\"]\",\n                            \"dim\": \"200 mm\"\n                        },\n                        {\n                            \"id\": 3,\n                            \"title\": \"product 3\",\n                            \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software and online services. Apple is the largest information technology company by revenue and, since January 2021, the world's most valuable company\",\n                            \"price\": 99.99,\n                            \"sub_cat_id\": 9,\n                            \"seller_id\": 4,\n                            \"created_at\": \"2022-05-05T14:35:58.000000Z\",\n                            \"updated_at\": \"2022-05-05T16:24:11.000000Z\",\n                            \"qty\": \"10 \",\n                            \"packing\": \"Drum\",\n                            \"sample\": \"0\",\n                            \"ProductionData\": \"2022-05-05T16:22\",\n                            \"expirationDate\": \"2022-05-25T16:22\",\n                            \"length\": \"10 mm\",\n                            \"in_out\": null,\n                            \"sch\": \"12\",\n                            \"pressure\": \"132 Bar\",\n                            \"size\": \"123\",\n                            \"brand\": \"fjidjed\",\n                            \"class\": \"131\",\n                            \"moc\": null,\n                            \"material\": \"jisfdjif\",\n                            \"grade\": \"kdokseods\",\n                            \"website\": \"kodks\",\n                            \"flowrate\": \"3564 m3/hr\",\n                            \"content\": \"<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,</p>\\r\\n<p>Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor</p>\\r\\n<p>in REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR. EXCepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\\r\\n<p>&nbsp;</p>\",\n                            \"mods\": null,\n                            \"tds\": \"_1651761358.jpg\",\n                            \"coa\": \"_1651761358.jpg\",\n                            \"docs\": null,\n                            \"cover\": \"_1651761358.jpg\",\n                            \"photos\": \"[\\\"0_1651762300.jpg\\\",\\\"1_1651762300.jpg\\\",\\\"2_1651762300.jpg\\\",\\\"3_1651762300.jpg\\\",\\\"4_1651762300.jpg\\\",\\\"5_1651762300.jpg\\\",\\\"6_1651762300.jpg\\\",\\\"7_1651762300.jpg\\\"]\",\n                            \"dim\": \"10 mm\"\n                        },\n                        {\n                            \"id\": 4,\n                            \"title\": \"product 4\",\n                            \"description\": \"test model test model test model test model test model test model\",\n                            \"price\": 150.73,\n                            \"sub_cat_id\": 9,\n                            \"seller_id\": 4,\n                            \"created_at\": \"2022-05-05T14:51:40.000000Z\",\n                            \"updated_at\": \"2022-05-05T14:51:40.000000Z\",\n                            \"qty\": \"200 \",\n                            \"packing\": \"Drum\",\n                            \"sample\": \"1\",\n                            \"ProductionData\": \"2022-05-05T16:50\",\n                            \"expirationDate\": \"2022-05-05T16:50\",\n                            \"length\": \"100 mm\",\n                            \"in_out\": \"out\",\n                            \"sch\": \"200\",\n                            \"pressure\": \"100 Bar\",\n                            \"size\": \"40000\",\n                            \"brand\": \"jdioasidsx\",\n                            \"class\": \"9873\",\n                            \"moc\": null,\n                            \"material\": \"yruyuer\",\n                            \"grade\": \"jufisdjofds\",\n                            \"website\": \"jfsidjisd\",\n                            \"flowrate\": \"83834 m3/hr\",\n                            \"content\": null,\n                            \"mods\": null,\n                            \"tds\": \"_1651762300.jpg\",\n                            \"coa\": \"_1651762300.jpg\",\n                            \"docs\": null,\n                            \"cover\": \"_1651762300.jpg\",\n                            \"photos\": \"[\\\"0_1651762300.jpg\\\",\\\"1_1651762300.jpg\\\",\\\"2_1651762300.jpg\\\",\\\"3_1651762300.jpg\\\",\\\"4_1651762300.jpg\\\",\\\"5_1651762300.jpg\\\",\\\"6_1651762300.jpg\\\",\\\"7_1651762300.jpg\\\"]\",\n                            \"dim\": \"200 mm\"\n                        }\n                    ]\n                }\n            },\n            {\n                \"id\": 2,\n                \"sub_cat_id\": 10,\n                \"seller_id\": 4,\n                \"created_at\": \"2022-05-03T19:54:52.000000Z\",\n                \"updated_at\": \"2022-05-03T19:54:52.000000Z\",\n                \"sub_cat\": {\n                    \"id\": 10,\n                    \"title\": \"sub_sub_cat2\",\n                    \"cat_id\": null,\n                    \"sub_cat_id\": 5,\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"product\": []\n                }\n            },\n            {\n                \"id\": 3,\n                \"sub_cat_id\": 12,\n                \"seller_id\": 4,\n                \"created_at\": \"2022-05-03T19:54:52.000000Z\",\n                \"updated_at\": \"2022-05-03T19:54:52.000000Z\",\n                \"sub_cat\": {\n                    \"id\": 12,\n                    \"title\": \"sub_sub_cat4\",\n                    \"cat_id\": null,\n                    \"sub_cat_id\": 5,\n                    \"created_at\": null,\n                    \"updated_at\": null,\n                    \"product\": []\n                }\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "ALL product",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3NlbGxlci9hdXRoL2xvZ2luIiwiaWF0IjoxNjU2MzMxMjg4LCJleHAiOjE2NTY5MzYwODgsIm5iZiI6MTY1NjMzMTI4OCwianRpIjoiME5xcDJSb3BzUUJMVkozdiIsInN1YiI6IjQiLCJwcnYiOiJlYWU5MDMyOGE5OWYzNDljYjkwMDMwNGUxZjk0ZDdkZjFmYzRkZTAzIn0.FC_gjjmkdKH-mO_6BAyKAD_X9QDdArEtWGpUxLpsyQs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sub_cat_id\":55\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/all/product",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"all",
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "1",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "12.23",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "qty",
+							"value": "10",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "qtyunit",
+							"value": "kilo",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "packing",
+							"value": "solid",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "sample",
+							"value": "1",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"description": "required",
+							"type": "file",
+							"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-1.jpg"
+						},
+						{
+							"key": "photos",
+							"description": "required",
+							"type": "file",
+							"src": [
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-1.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-2.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-3.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-4.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-5.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-6.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-7.jpg"
+							]
+						},
+						{
+							"key": "description",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+							"type": "text"
+						},
+						{
+							"key": "productionData",
+							"value": "2022-05-05T16:22",
+							"description": "date",
+							"type": "text"
+						},
+						{
+							"key": "expirationDate",
+							"value": "2023-05-05T16:22",
+							"description": "date",
+							"type": "text"
+						},
+						{
+							"key": "length",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "length_unit",
+							"value": "mm",
+							"type": "text"
+						},
+						{
+							"key": "dim",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "dim_unit",
+							"value": "m",
+							"type": "text"
+						},
+						{
+							"key": "in_out",
+							"value": "in",
+							"type": "text"
+						},
+						{
+							"key": "sch",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "pressure",
+							"value": "132",
+							"type": "text"
+						},
+						{
+							"key": "Pressure_unit",
+							"value": "Bar",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "brand1",
+							"type": "text"
+						},
+						{
+							"key": "class",
+							"value": "131",
+							"type": "text"
+						},
+						{
+							"key": "material",
+							"value": "Na",
+							"type": "text"
+						},
+						{
+							"key": "grade",
+							"value": "grade 3",
+							"type": "text"
+						},
+						{
+							"key": "website",
+							"value": "zatech.tech",
+							"type": "text"
+						},
+						{
+							"key": "flowrate",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "flow_rate_unit",
+							"value": "m3/hr",
+							"type": "text"
+						},
+						{
+							"key": "mods",
+							"type": "file",
+							"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-1.jpg"
+						},
+						{
+							"key": "tds",
+							"type": "file",
+							"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-2.jpg"
+						},
+						{
+							"key": "coa",
+							"type": "file",
+							"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-3.jpg"
+						},
+						{
+							"key": "docs",
+							"type": "file",
+							"src": [
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-1.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-2.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-3.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-4.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-5.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-6.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-7.jpg"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://vendor.zatech.tech/api/seller/add/product",
+					"protocol": "http",
+					"host": [
+						"vendor",
+						"zatech",
+						"tech"
+					],
+					"path": [
+						"api",
+						"seller",
+						"add",
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "product api 1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sub_cat_id",
+									"value": "9",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "12.23",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "10",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "qtyunit",
+									"value": "kilo",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "packing",
+									"value": "solid",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sample",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"description": "required",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg"
+								},
+								{
+									"key": "photos",
+									"description": "required",
+									"type": "file",
+									"src": [
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-3.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-4.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-6.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-7.jpg"
+									]
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+									"type": "text"
+								},
+								{
+									"key": "productionData",
+									"value": "2022-05-05T16:22",
+									"description": "date",
+									"type": "text"
+								},
+								{
+									"key": "expirationDate",
+									"value": "2023-05-05T16:22",
+									"description": "date",
+									"type": "text"
+								},
+								{
+									"key": "length",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "length_unit",
+									"value": "mm",
+									"type": "text"
+								},
+								{
+									"key": "dim",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "dim_unit",
+									"value": "m",
+									"type": "text"
+								},
+								{
+									"key": "in_out",
+									"value": "in",
+									"type": "text"
+								},
+								{
+									"key": "sch",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "pressure",
+									"value": "132",
+									"type": "text"
+								},
+								{
+									"key": "Pressure_unit",
+									"value": "Bar",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "brand1",
+									"type": "text"
+								},
+								{
+									"key": "class",
+									"value": "131",
+									"type": "text"
+								},
+								{
+									"key": "material",
+									"value": "Na",
+									"type": "text"
+								},
+								{
+									"key": "grade",
+									"value": "grade 3",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "zatech.tech",
+									"type": "text"
+								},
+								{
+									"key": "flowrate",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "flow_rate_unit",
+									"value": "m3/hr",
+									"type": "text"
+								},
+								{
+									"key": "mods",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg"
+								},
+								{
+									"key": "tds",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg"
+								},
+								{
+									"key": "coa",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg"
+								},
+								{
+									"key": "docs",
+									"type": "file",
+									"src": [
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-3.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-4.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-6.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-7.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/add/product",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"add",
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 17:46:30 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 17:46:30 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": [\n        \"Product Added Successfully\"\n    ],\n    \"data\": \" \"\n}"
+				},
+				{
+					"name": "add product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "product api 1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sub_cat_id",
+									"value": "9",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "12.23",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "10",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "qtyunit",
+									"value": "kilo",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "packing",
+									"value": "solid",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sample",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"description": "required",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-1.jpg"
+								},
+								{
+									"key": "photos",
+									"description": "required",
+									"type": "file",
+									"src": [
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-1.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-2.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-3.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-4.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-5.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-6.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-7.jpg"
+									]
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+									"type": "text"
+								},
+								{
+									"key": "productionData",
+									"value": "2022-05-05T16:22",
+									"description": "date",
+									"type": "text"
+								},
+								{
+									"key": "expirationDate",
+									"value": "2023-05-05T16:22",
+									"description": "date",
+									"type": "text"
+								},
+								{
+									"key": "length",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "length_unit",
+									"value": "mm",
+									"type": "text"
+								},
+								{
+									"key": "dim",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "dim_unit",
+									"value": "m",
+									"type": "text"
+								},
+								{
+									"key": "in_out",
+									"value": "in",
+									"type": "text"
+								},
+								{
+									"key": "sch",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "pressure",
+									"value": "132",
+									"type": "text"
+								},
+								{
+									"key": "Pressure_unit",
+									"value": "Bar",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "brand1",
+									"type": "text"
+								},
+								{
+									"key": "class",
+									"value": "131",
+									"type": "text"
+								},
+								{
+									"key": "material",
+									"value": "Na",
+									"type": "text"
+								},
+								{
+									"key": "grade",
+									"value": "grade 3",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "zatech.tech",
+									"type": "text"
+								},
+								{
+									"key": "flowrate",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "flow_rate_unit",
+									"value": "m3/hr",
+									"type": "text"
+								},
+								{
+									"key": "mods",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg"
+								},
+								{
+									"key": "tds",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg"
+								},
+								{
+									"key": "coa",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg"
+								},
+								{
+									"key": "docs",
+									"type": "file",
+									"src": [
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-3.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-4.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-6.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-7.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/add/product",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"add",
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 20:38:28 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 20:38:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": [\n        \"Product Added Successfully\"\n    ],\n    \"data\": \" \"\n}"
+				},
+				{
+					"name": "cover missing",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "product api 1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sub_cat_id",
+									"value": "9",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "12.23",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "10",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "qtyunit",
+									"value": "kilo",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "packing",
+									"value": "solid",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sample",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"description": "required",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "photos",
+									"description": "required",
+									"type": "file",
+									"src": [
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-1.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-2.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-3.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-4.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-5.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-6.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-7.jpg"
+									]
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+									"type": "text"
+								},
+								{
+									"key": "productionData",
+									"value": "2022-05-05T16:22",
+									"description": "date",
+									"type": "text"
+								},
+								{
+									"key": "expirationDate",
+									"value": "2023-05-05T16:22",
+									"description": "date",
+									"type": "text"
+								},
+								{
+									"key": "length",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "length_unit",
+									"value": "mm",
+									"type": "text"
+								},
+								{
+									"key": "dim",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "dim_unit",
+									"value": "m",
+									"type": "text"
+								},
+								{
+									"key": "in_out",
+									"value": "in",
+									"type": "text"
+								},
+								{
+									"key": "sch",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "pressure",
+									"value": "132",
+									"type": "text"
+								},
+								{
+									"key": "Pressure_unit",
+									"value": "Bar",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "brand1",
+									"type": "text"
+								},
+								{
+									"key": "class",
+									"value": "131",
+									"type": "text"
+								},
+								{
+									"key": "material",
+									"value": "Na",
+									"type": "text"
+								},
+								{
+									"key": "grade",
+									"value": "grade 3",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "zatech.tech",
+									"type": "text"
+								},
+								{
+									"key": "flowrate",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "flow_rate_unit",
+									"value": "m3/hr",
+									"type": "text"
+								},
+								{
+									"key": "mods",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg"
+								},
+								{
+									"key": "tds",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg"
+								},
+								{
+									"key": "coa",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg"
+								},
+								{
+									"key": "docs",
+									"type": "file",
+									"src": [
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-3.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-4.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-6.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-7.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/add/product",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"add",
+								"product"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 20:39:25 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 20:39:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": [\n        \"The cover field is required.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "product api 1",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "sub_cat_id",
+							"value": "9",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "12.23",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "qty",
+							"value": "10",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "qtyunit",
+							"value": "kilo",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "packing",
+							"value": "solid",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "sample",
+							"value": "1",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "cover",
+							"description": "required",
+							"type": "file",
+							"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg"
+						},
+						{
+							"key": "photos",
+							"description": "required",
+							"type": "file",
+							"src": [
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-3.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-4.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-6.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-7.jpg"
+							]
+						},
+						{
+							"key": "description",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+							"description": "required",
+							"type": "text"
+						},
+						{
+							"key": "content",
+							"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+							"type": "text"
+						},
+						{
+							"key": "productionData",
+							"value": "2022-05-05T16:22",
+							"description": "date",
+							"type": "text"
+						},
+						{
+							"key": "expirationDate",
+							"value": "2023-05-05T16:22",
+							"description": "date",
+							"type": "text"
+						},
+						{
+							"key": "length",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "length_unit",
+							"value": "mm",
+							"type": "text"
+						},
+						{
+							"key": "dim",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "dim_unit",
+							"value": "m",
+							"type": "text"
+						},
+						{
+							"key": "in_out",
+							"value": "in",
+							"type": "text"
+						},
+						{
+							"key": "sch",
+							"value": "12",
+							"type": "text"
+						},
+						{
+							"key": "pressure",
+							"value": "132",
+							"type": "text"
+						},
+						{
+							"key": "Pressure_unit",
+							"value": "Bar",
+							"type": "text"
+						},
+						{
+							"key": "size",
+							"value": "123",
+							"type": "text"
+						},
+						{
+							"key": "brand",
+							"value": "brand1",
+							"type": "text"
+						},
+						{
+							"key": "class",
+							"value": "131",
+							"type": "text"
+						},
+						{
+							"key": "material",
+							"value": "Na",
+							"type": "text"
+						},
+						{
+							"key": "grade",
+							"value": "grade 3",
+							"type": "text"
+						},
+						{
+							"key": "website",
+							"value": "zatech.tech",
+							"type": "text"
+						},
+						{
+							"key": "flowrate",
+							"value": "30",
+							"type": "text"
+						},
+						{
+							"key": "flow_rate_unit",
+							"value": "m3/hr",
+							"type": "text"
+						},
+						{
+							"key": "mods",
+							"type": "file",
+							"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg"
+						},
+						{
+							"key": "tds",
+							"type": "file",
+							"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg"
+						},
+						{
+							"key": "coa",
+							"type": "file",
+							"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg"
+						},
+						{
+							"key": "docs",
+							"type": "file",
+							"src": [
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-3.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-4.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-6.jpg",
+								"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-7.jpg"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://vendor.zatech.tech/api/seller/edit/product",
+					"protocol": "http",
+					"host": [
+						"vendor",
+						"zatech",
+						"tech"
+					],
+					"path": [
+						"api",
+						"seller",
+						"edit",
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Edit product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "product api 1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sub_cat_id",
+									"value": "9",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "12.23",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "qty",
+									"value": "10",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "qtyunit",
+									"value": "kilo",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "packing",
+									"value": "solid",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "sample",
+									"value": "1",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "cover",
+									"description": "required",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg"
+								},
+								{
+									"key": "photos",
+									"description": "required",
+									"type": "file",
+									"src": [
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-3.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-4.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-6.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-7.jpg"
+									]
+								},
+								{
+									"key": "description",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+									"description": "required",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+									"type": "text"
+								},
+								{
+									"key": "productionData",
+									"value": "2022-05-05T16:22",
+									"description": "date",
+									"type": "text"
+								},
+								{
+									"key": "expirationDate",
+									"value": "2023-05-05T16:22",
+									"description": "date",
+									"type": "text"
+								},
+								{
+									"key": "length",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "length_unit",
+									"value": "mm",
+									"type": "text"
+								},
+								{
+									"key": "dim",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "dim_unit",
+									"value": "m",
+									"type": "text"
+								},
+								{
+									"key": "in_out",
+									"value": "in",
+									"type": "text"
+								},
+								{
+									"key": "sch",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "pressure",
+									"value": "132",
+									"type": "text"
+								},
+								{
+									"key": "Pressure_unit",
+									"value": "Bar",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "123",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "brand1",
+									"type": "text"
+								},
+								{
+									"key": "class",
+									"value": "131",
+									"type": "text"
+								},
+								{
+									"key": "material",
+									"value": "Na",
+									"type": "text"
+								},
+								{
+									"key": "grade",
+									"value": "grade 3",
+									"type": "text"
+								},
+								{
+									"key": "website",
+									"value": "zatech.tech",
+									"type": "text"
+								},
+								{
+									"key": "flowrate",
+									"value": "30",
+									"type": "text"
+								},
+								{
+									"key": "flow_rate_unit",
+									"value": "m3/hr",
+									"type": "text"
+								},
+								{
+									"key": "mods",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg"
+								},
+								{
+									"key": "tds",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg"
+								},
+								{
+									"key": "coa",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg"
+								},
+								{
+									"key": "docs",
+									"type": "file",
+									"src": [
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-1.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-2.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-3.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-4.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-5.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-6.jpg",
+										"/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Electric Grill/NBQ008 JPG/NBQ008-7.jpg"
+									]
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/edit/product",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"edit",
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 17:45:46 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 17:45:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": [\n        \"Product updated Successfully\"\n    ],\n    \"data\": \" \"\n}"
+				}
+			]
+		},
+		{
+			"name": "Product Delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"product_id\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/seller/delete/product",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"delete",
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Product Delete",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\":\"7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/seller/delete/product",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"delete",
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 18:01:04 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 18:01:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": [\n        \"Product Deleted successfully\"\n    ],\n    \"data\": 200\n}"
+				},
+				{
+					"name": "Product Delete not valid id",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\":\"556\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/seller/delete/product",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"delete",
+								"product"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 18:01:21 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 18:01:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": [\n        \"The selected product id is invalid.\"\n    ]\n}"
+				},
+				{
+					"name": "Product Delete id not send",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/seller/delete/product",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"delete",
+								"product"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 18:02:00 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 18:02:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"error\",\n    \"message\": [\n        \"The product id field is required.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://vendor.zatech.tech/api/seller/order",
+					"protocol": "http",
+					"host": [
+						"vendor",
+						"zatech",
+						"tech"
+					],
+					"path": [
+						"api",
+						"seller",
+						"order"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/order",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 17:41:00 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 15 May 2022 17:41:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"order\": [\n            {\n                \"id\": 1,\n                \"product_id\": \"[\\\"[6,1]\\\"]\",\n                \"customer_id\": 1,\n                \"payment_type\": null,\n                \"pay_code\": null,\n                \"price\": \"600.00\",\n                \"address\": \"New Nubaria City\",\n                \"city\": \"New Nubaria City\",\n                \"country\": \"Egypt\",\n                \"created_at\": \"2022-05-13T18:24:03.000000Z\",\n                \"updated_at\": \"2022-05-13T18:24:03.000000Z\",\n                \"product\": [\n                    {\n                        \"id\": 1,\n                        \"title\": \"product 1\",\n                        \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software and online services. Apple is the largest information technology company by revenue and, since January 2021, the world's most valuable company\",\n                        \"price\": 99.99,\n                        \"sub_cat_id\": 9,\n                        \"seller_id\": 4,\n                        \"created_at\": \"2022-05-05T14:35:58.000000Z\",\n                        \"updated_at\": \"2022-05-05T16:24:11.000000Z\",\n                        \"qty\": \"10 \",\n                        \"packing\": \"Drum\",\n                        \"sample\": \"0\",\n                        \"ProductionData\": \"2022-05-05T16:22\",\n                        \"expirationDate\": \"2022-05-25T16:22\",\n                        \"length\": \"10 mm\",\n                        \"in_out\": null,\n                        \"sch\": \"12\",\n                        \"pressure\": \"132 Bar\",\n                        \"size\": \"123\",\n                        \"brand\": \"fjidjed\",\n                        \"class\": \"131\",\n                        \"moc\": null,\n                        \"material\": \"jisfdjif\",\n                        \"grade\": \"kdokseods\",\n                        \"website\": \"kodks\",\n                        \"flowrate\": \"3564 m3/hr\",\n                        \"content\": \"<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,</p>\\r\\n<p>Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor</p>\\r\\n<p>in REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR. EXCepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\\r\\n<p>&nbsp;</p>\",\n                        \"mods\": null,\n                        \"tds\": \"_1651761358.jpg\",\n                        \"coa\": \"_1651761358.jpg\",\n                        \"docs\": null,\n                        \"cover\": \"_1651761358.jpg\",\n                        \"photos\": \"[\\\"0_1651762300.jpg\\\",\\\"1_1651762300.jpg\\\",\\\"2_1651762300.jpg\\\",\\\"3_1651762300.jpg\\\",\\\"4_1651762300.jpg\\\",\\\"5_1651762300.jpg\\\",\\\"6_1651762300.jpg\\\",\\\"7_1651762300.jpg\\\"]\",\n                        \"dim\": \"10 mm\"\n                    }\n                ],\n                \"count\": {\n                    \"1\": 6\n                },\n                \"customer\": {\n                    \"id\": 1,\n                    \"name\": \"amme\",\n                    \"email\": \"ahmed.m.eid.2001@gmail.com\",\n                    \"email_verified_at\": null,\n                    \"fcmToken\": null,\n                    \"created_at\": \"2022-04-10T00:42:38.000000Z\",\n                    \"updated_at\": \"2022-04-10T00:42:38.000000Z\",\n                    \"registration_certificate\": \"amme_1649551358.pdf\",\n                    \"tax_card\": \"amme_1649551358.pdf\",\n                    \"vat_cert\": \"amme_1649551358.pdf\",\n                    \"invoice\": \"amme_1649551358.pdf\",\n                    \"delgation\": \"amme_1649551358.pdf\",\n                    \"phone\": \"01005084569\",\n                    \"reference_list\": \"amme_1649551358.pdf\"\n                }\n            },\n            {\n                \"id\": 2,\n                \"product_id\": \"[\\\"[6,1]\\\"]\",\n                \"customer_id\": 1,\n                \"payment_type\": null,\n                \"pay_code\": null,\n                \"price\": \"600.00\",\n                \"address\": \"New Nubaria City\",\n                \"city\": \"New Nubaria City\",\n                \"country\": \"Egypt\",\n                \"created_at\": \"2022-05-13T18:41:58.000000Z\",\n                \"updated_at\": \"2022-05-13T18:41:58.000000Z\",\n                \"product\": [\n                    {\n                        \"id\": 1,\n                        \"title\": \"product 1\",\n                        \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software and online services. Apple is the largest information technology company by revenue and, since January 2021, the world's most valuable company\",\n                        \"price\": 99.99,\n                        \"sub_cat_id\": 9,\n                        \"seller_id\": 4,\n                        \"created_at\": \"2022-05-05T14:35:58.000000Z\",\n                        \"updated_at\": \"2022-05-05T16:24:11.000000Z\",\n                        \"qty\": \"10 \",\n                        \"packing\": \"Drum\",\n                        \"sample\": \"0\",\n                        \"ProductionData\": \"2022-05-05T16:22\",\n                        \"expirationDate\": \"2022-05-25T16:22\",\n                        \"length\": \"10 mm\",\n                        \"in_out\": null,\n                        \"sch\": \"12\",\n                        \"pressure\": \"132 Bar\",\n                        \"size\": \"123\",\n                        \"brand\": \"fjidjed\",\n                        \"class\": \"131\",\n                        \"moc\": null,\n                        \"material\": \"jisfdjif\",\n                        \"grade\": \"kdokseods\",\n                        \"website\": \"kodks\",\n                        \"flowrate\": \"3564 m3/hr\",\n                        \"content\": \"<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,</p>\\r\\n<p>Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor</p>\\r\\n<p>in REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR. EXCepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\\r\\n<p>&nbsp;</p>\",\n                        \"mods\": null,\n                        \"tds\": \"_1651761358.jpg\",\n                        \"coa\": \"_1651761358.jpg\",\n                        \"docs\": null,\n                        \"cover\": \"_1651761358.jpg\",\n                        \"photos\": \"[\\\"0_1651762300.jpg\\\",\\\"1_1651762300.jpg\\\",\\\"2_1651762300.jpg\\\",\\\"3_1651762300.jpg\\\",\\\"4_1651762300.jpg\\\",\\\"5_1651762300.jpg\\\",\\\"6_1651762300.jpg\\\",\\\"7_1651762300.jpg\\\"]\",\n                        \"dim\": \"10 mm\"\n                    },\n                    {\n                        \"id\": 1,\n                        \"title\": \"product 1\",\n                        \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software and online services. Apple is the largest information technology company by revenue and, since January 2021, the world's most valuable company\",\n                        \"price\": 99.99,\n                        \"sub_cat_id\": 9,\n                        \"seller_id\": 4,\n                        \"created_at\": \"2022-05-05T14:35:58.000000Z\",\n                        \"updated_at\": \"2022-05-05T16:24:11.000000Z\",\n                        \"qty\": \"10 \",\n                        \"packing\": \"Drum\",\n                        \"sample\": \"0\",\n                        \"ProductionData\": \"2022-05-05T16:22\",\n                        \"expirationDate\": \"2022-05-25T16:22\",\n                        \"length\": \"10 mm\",\n                        \"in_out\": null,\n                        \"sch\": \"12\",\n                        \"pressure\": \"132 Bar\",\n                        \"size\": \"123\",\n                        \"brand\": \"fjidjed\",\n                        \"class\": \"131\",\n                        \"moc\": null,\n                        \"material\": \"jisfdjif\",\n                        \"grade\": \"kdokseods\",\n                        \"website\": \"kodks\",\n                        \"flowrate\": \"3564 m3/hr\",\n                        \"content\": \"<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,</p>\\r\\n<p>Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor</p>\\r\\n<p>in REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR. EXCepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\\r\\n<p>&nbsp;</p>\",\n                        \"mods\": null,\n                        \"tds\": \"_1651761358.jpg\",\n                        \"coa\": \"_1651761358.jpg\",\n                        \"docs\": null,\n                        \"cover\": \"_1651761358.jpg\",\n                        \"photos\": \"[\\\"0_1651762300.jpg\\\",\\\"1_1651762300.jpg\\\",\\\"2_1651762300.jpg\\\",\\\"3_1651762300.jpg\\\",\\\"4_1651762300.jpg\\\",\\\"5_1651762300.jpg\\\",\\\"6_1651762300.jpg\\\",\\\"7_1651762300.jpg\\\"]\",\n                        \"dim\": \"10 mm\"\n                    }\n                ],\n                \"count\": {\n                    \"1\": 6\n                },\n                \"customer\": {\n                    \"id\": 1,\n                    \"name\": \"amme\",\n                    \"email\": \"ahmed.m.eid.2001@gmail.com\",\n                    \"email_verified_at\": null,\n                    \"fcmToken\": null,\n                    \"created_at\": \"2022-04-10T00:42:38.000000Z\",\n                    \"updated_at\": \"2022-04-10T00:42:38.000000Z\",\n                    \"registration_certificate\": \"amme_1649551358.pdf\",\n                    \"tax_card\": \"amme_1649551358.pdf\",\n                    \"vat_cert\": \"amme_1649551358.pdf\",\n                    \"invoice\": \"amme_1649551358.pdf\",\n                    \"delgation\": \"amme_1649551358.pdf\",\n                    \"phone\": \"01005084569\",\n                    \"reference_list\": \"amme_1649551358.pdf\"\n                }\n            },\n            {\n                \"id\": 3,\n                \"product_id\": \"[\\\"[6,1]\\\"]\",\n                \"customer_id\": 1,\n                \"payment_type\": null,\n                \"pay_code\": null,\n                \"price\": \"599.94\",\n                \"address\": \"New Nubaria City\",\n                \"city\": \"New Nubaria City\",\n                \"country\": \"Egypt\",\n                \"created_at\": \"2022-05-13T18:42:14.000000Z\",\n                \"updated_at\": \"2022-05-13T18:42:14.000000Z\",\n                \"product\": [\n                    {\n                        \"id\": 1,\n                        \"title\": \"product 1\",\n                        \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software and online services. Apple is the largest information technology company by revenue and, since January 2021, the world's most valuable company\",\n                        \"price\": 99.99,\n                        \"sub_cat_id\": 9,\n                        \"seller_id\": 4,\n                        \"created_at\": \"2022-05-05T14:35:58.000000Z\",\n                        \"updated_at\": \"2022-05-05T16:24:11.000000Z\",\n                        \"qty\": \"10 \",\n                        \"packing\": \"Drum\",\n                        \"sample\": \"0\",\n                        \"ProductionData\": \"2022-05-05T16:22\",\n                        \"expirationDate\": \"2022-05-25T16:22\",\n                        \"length\": \"10 mm\",\n                        \"in_out\": null,\n                        \"sch\": \"12\",\n                        \"pressure\": \"132 Bar\",\n                        \"size\": \"123\",\n                        \"brand\": \"fjidjed\",\n                        \"class\": \"131\",\n                        \"moc\": null,\n                        \"material\": \"jisfdjif\",\n                        \"grade\": \"kdokseods\",\n                        \"website\": \"kodks\",\n                        \"flowrate\": \"3564 m3/hr\",\n                        \"content\": \"<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,</p>\\r\\n<p>Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor</p>\\r\\n<p>in REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR. EXCepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\\r\\n<p>&nbsp;</p>\",\n                        \"mods\": null,\n                        \"tds\": \"_1651761358.jpg\",\n                        \"coa\": \"_1651761358.jpg\",\n                        \"docs\": null,\n                        \"cover\": \"_1651761358.jpg\",\n                        \"photos\": \"[\\\"0_1651762300.jpg\\\",\\\"1_1651762300.jpg\\\",\\\"2_1651762300.jpg\\\",\\\"3_1651762300.jpg\\\",\\\"4_1651762300.jpg\\\",\\\"5_1651762300.jpg\\\",\\\"6_1651762300.jpg\\\",\\\"7_1651762300.jpg\\\"]\",\n                        \"dim\": \"10 mm\"\n                    },\n                    {\n                        \"id\": 1,\n                        \"title\": \"product 1\",\n                        \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software and online services. Apple is the largest information technology company by revenue and, since January 2021, the world's most valuable company\",\n                        \"price\": 99.99,\n                        \"sub_cat_id\": 9,\n                        \"seller_id\": 4,\n                        \"created_at\": \"2022-05-05T14:35:58.000000Z\",\n                        \"updated_at\": \"2022-05-05T16:24:11.000000Z\",\n                        \"qty\": \"10 \",\n                        \"packing\": \"Drum\",\n                        \"sample\": \"0\",\n                        \"ProductionData\": \"2022-05-05T16:22\",\n                        \"expirationDate\": \"2022-05-25T16:22\",\n                        \"length\": \"10 mm\",\n                        \"in_out\": null,\n                        \"sch\": \"12\",\n                        \"pressure\": \"132 Bar\",\n                        \"size\": \"123\",\n                        \"brand\": \"fjidjed\",\n                        \"class\": \"131\",\n                        \"moc\": null,\n                        \"material\": \"jisfdjif\",\n                        \"grade\": \"kdokseods\",\n                        \"website\": \"kodks\",\n                        \"flowrate\": \"3564 m3/hr\",\n                        \"content\": \"<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,</p>\\r\\n<p>Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor</p>\\r\\n<p>in REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR. EXCepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\\r\\n<p>&nbsp;</p>\",\n                        \"mods\": null,\n                        \"tds\": \"_1651761358.jpg\",\n                        \"coa\": \"_1651761358.jpg\",\n                        \"docs\": null,\n                        \"cover\": \"_1651761358.jpg\",\n                        \"photos\": \"[\\\"0_1651762300.jpg\\\",\\\"1_1651762300.jpg\\\",\\\"2_1651762300.jpg\\\",\\\"3_1651762300.jpg\\\",\\\"4_1651762300.jpg\\\",\\\"5_1651762300.jpg\\\",\\\"6_1651762300.jpg\\\",\\\"7_1651762300.jpg\\\"]\",\n                        \"dim\": \"10 mm\"\n                    },\n                    {\n                        \"id\": 1,\n                        \"title\": \"product 1\",\n                        \"description\": \"Apple Inc. is an American multinational technology company that specializes in consumer electronics, computer software and online services. Apple is the largest information technology company by revenue and, since January 2021, the world's most valuable company\",\n                        \"price\": 99.99,\n                        \"sub_cat_id\": 9,\n                        \"seller_id\": 4,\n                        \"created_at\": \"2022-05-05T14:35:58.000000Z\",\n                        \"updated_at\": \"2022-05-05T16:24:11.000000Z\",\n                        \"qty\": \"10 \",\n                        \"packing\": \"Drum\",\n                        \"sample\": \"0\",\n                        \"ProductionData\": \"2022-05-05T16:22\",\n                        \"expirationDate\": \"2022-05-25T16:22\",\n                        \"length\": \"10 mm\",\n                        \"in_out\": null,\n                        \"sch\": \"12\",\n                        \"pressure\": \"132 Bar\",\n                        \"size\": \"123\",\n                        \"brand\": \"fjidjed\",\n                        \"class\": \"131\",\n                        \"moc\": null,\n                        \"material\": \"jisfdjif\",\n                        \"grade\": \"kdokseods\",\n                        \"website\": \"kodks\",\n                        \"flowrate\": \"3564 m3/hr\",\n                        \"content\": \"<p>lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ut enim ad minim veniam,</p>\\r\\n<p>Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor</p>\\r\\n<p>in REPREHENDERIT IN VOLUPTATE VELIT ESSE CILLUM DOLORE EU FUGIAT NULLA PARIATUR. EXCepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\\r\\n<p>&nbsp;</p>\",\n                        \"mods\": null,\n                        \"tds\": \"_1651761358.jpg\",\n                        \"coa\": \"_1651761358.jpg\",\n                        \"docs\": null,\n                        \"cover\": \"_1651761358.jpg\",\n                        \"photos\": \"[\\\"0_1651762300.jpg\\\",\\\"1_1651762300.jpg\\\",\\\"2_1651762300.jpg\\\",\\\"3_1651762300.jpg\\\",\\\"4_1651762300.jpg\\\",\\\"5_1651762300.jpg\\\",\\\"6_1651762300.jpg\\\",\\\"7_1651762300.jpg\\\"]\",\n                        \"dim\": \"10 mm\"\n                    }\n                ],\n                \"count\": {\n                    \"1\": 6\n                },\n                \"customer\": {\n                    \"id\": 1,\n                    \"name\": \"amme\",\n                    \"email\": \"ahmed.m.eid.2001@gmail.com\",\n                    \"email_verified_at\": null,\n                    \"fcmToken\": null,\n                    \"created_at\": \"2022-04-10T00:42:38.000000Z\",\n                    \"updated_at\": \"2022-04-10T00:42:38.000000Z\",\n                    \"registration_certificate\": \"amme_1649551358.pdf\",\n                    \"tax_card\": \"amme_1649551358.pdf\",\n                    \"vat_cert\": \"amme_1649551358.pdf\",\n                    \"invoice\": \"amme_1649551358.pdf\",\n                    \"delgation\": \"amme_1649551358.pdf\",\n                    \"phone\": \"01005084569\",\n                    \"reference_list\": \"amme_1649551358.pdf\"\n                }\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://vendor.zatech.tech/api/seller/service",
+					"protocol": "http",
+					"host": [
+						"vendor",
+						"zatech",
+						"tech"
+					],
+					"path": [
+						"api",
+						"seller",
+						"service"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Service",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/service",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"service"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 21:24:45 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 21:24:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": [\n        {\n            \"id\": 3,\n            \"sub_cat_id\": 28,\n            \"code\": \"CR3\",\n            \"customer_id\": 1,\n            \"drawing\": \"CR_1653069825.webp\",\n            \"boq\": \"CR_1653069825.png\",\n            \"vendorlist\": \"CR_1653069825.png\",\n            \"project_specification\": \"CR_1653069825.png\",\n            \"specs\": \"CR_1653069825.html\",\n            \"other\": \"CR_1653069825.jpg\",\n            \"status\": 3,\n            \"rate\": \"test rate\",\n            \"created_at\": \"2022-05-20T16:03:45.000000Z\",\n            \"updated_at\": \"2022-05-23T16:34:05.000000Z\",\n            \"decline_reason\": null,\n            \"sub_c_at\": {\n                \"id\": 28,\n                \"title\": \"projects manager\",\n                \"cat_id\": null,\n                \"sub_cat_id\": 18,\n                \"created_at\": null,\n                \"updated_at\": null\n            },\n            \"price_lists\": [\n                {\n                    \"id\": 3,\n                    \"code\": \"PL3-5\",\n                    \"files\": \"PL3051653254809.jpg\",\n                    \"service_id\": 3,\n                    \"seller_id\": 5,\n                    \"status\": 3,\n                    \"created_at\": \"2022-05-22T21:26:49.000000Z\",\n                    \"updated_at\": \"2022-05-23T16:22:39.000000Z\"\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add price List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "service_id",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-2.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/seller/service/price/list/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"service",
+						"price",
+						"list",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add price List",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "service_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/service/price/list/add",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"service",
+								"price",
+								"list",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 21:28:42 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 21:28:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": [\n        \"Price List Added Successfully\"\n    ],\n    \"data\": \" \"\n}"
+				}
+			]
+		},
+		{
+			"name": "Complete Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "service_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-2.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/seller/service/complete",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"service",
+						"complete"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add price List",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "service_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/ahmed/OneDrive/سطح المكتب/Images/Air Cooler/AT602PM JPG/AT602PM-2.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/service/price/list/add",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"service",
+								"price",
+								"list",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 21:28:42 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 23 May 2022 21:28:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": [\n        \"Price List Added Successfully\"\n    ],\n    \"data\": \" \"\n}"
+				}
+			]
+		},
+		{
+			"name": "Edit Profile Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/seller/auth/edit/profile/data",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"auth",
+						"edit",
+						"profile",
+						"data"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Edit Profile Data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:8000/api/seller/auth/edit/profile/data",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"seller",
+								"auth",
+								"edit",
+								"profile",
+								"data"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Jul 2022 15:11:45 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 15 Jul 2022 15:11:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.1.5"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"success\",\n    \"message\": \"\",\n    \"data\": {\n        \"user\": {\n            \"id\": 4,\n            \"name\": \"seller@site.com\",\n            \"email\": \"seller@site.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2022-05-03T17:54:52.000000Z\",\n            \"updated_at\": \"2022-05-23T11:46:11.000000Z\",\n            \"registration_certificate\": \"seller@site.com_1651607692.sql\",\n            \"reg_cert_status\": 0,\n            \"tax_card\": \"seller@site.com_1651607692.sql\",\n            \"tax_card_status\": 0,\n            \"vat_cert\": \"seller@site.com_1651607692.sql\",\n            \"vat_cert_status\": 0,\n            \"invoice\": \"seller@site.com_1651607692.sql\",\n            \"invoice_status\": 0,\n            \"delgation\": \"seller@site.com_1651607692.sql\",\n            \"delgation_status\": 0,\n            \"phone\": \"1005084569\",\n            \"reference_list\": \"seller@site.com_1651607692.sql\",\n            \"reference_status\": 0,\n            \"cat_id\": 1,\n            \"status\": 1,\n            \"avtar\": \"\",\n            \"cv\": \"\",\n            \"cv_status\": 0,\n            \"docs\": \"\",\n            \"docs_status\": 0,\n            \"type_cource\": \"\",\n            \"price\": 0,\n            \"Specialization\": \"\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "seller",
+							"description": "required",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "seller@site.com",
+							"description": "required",
+							"type": "default"
+						},
+						{
+							"key": " phone",
+							"value": "01005084569",
+							"description": "required",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"description": "required",
+							"type": "default"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "12345678",
+							"description": "required",
+							"type": "default"
+						},
+						{
+							"key": "registration_certificate",
+							"description": "if seller is chemical or service company",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "tax_card",
+							"description": "if seller is chemical or service company",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "vat_cert",
+							"description": "if seller is chemical or service company",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "invoice",
+							"description": "if seller is chemical or service company",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "delegation",
+							"description": "if seller is chemical or service company",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "reference_list",
+							"description": "if seller is chemical or service company",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "cv",
+							"description": "if seller is manpower",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "docs",
+							"description": "if seller is trainer  multiplu",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "on_of",
+							"value": "1",
+							"description": "if seller is trainer     1 is online   0 is offline",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"description": "if seller is trainer",
+							"type": "default"
+						},
+						{
+							"key": "price_type",
+							"value": "session",
+							"description": "if seller is trainer ---- by session , hours , all training , ......",
+							"type": "default"
+						},
+						{
+							"key": "Specialization",
+							"value": "web deveplement",
+							"description": "if seller is trainer",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/seller/auth/update/profile",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"auth",
+						"update",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Training",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/seller/training",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"seller",
+						"training"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3NlbGxlci9hdXRoL2xvZ2luIiwiaWF0IjoxNjU3ODk3ODQwLCJleHAiOjE2NTg1MDI2NDAsIm5iZiI6MTY1Nzg5Nzg0MCwianRpIjoiamdBdUFXVWpyazdneTI5ZiIsInN1YiI6IjQiLCJwcnYiOiJlYWU5MDMyOGE5OWYzNDljYjkwMDMwNGUxZjk0ZDdkZjFmYzRkZTAzIn0.P3Wyh0tqwXbmxGzLBVMfwcHxKDXyC0udvvjOM8yliy8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
