@@ -20,7 +20,7 @@ class IndProductController extends Controller
     use UploadFiles,APITrait;
     //
     public function index(){
-        $products = IndPrsoduct::with('allProduct')
+        $products = IndProduct::with('allProduct')
             ->where('seller_id',auth('seller-api')->user()->getAuthIdentifier())->get();
         return $this->returnSuccess('', compact('products'),'200');
 
@@ -29,9 +29,7 @@ class IndProductController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'all_product_id'=>'required',
-            'price'=>'required|numeric',
-            'qty'=>'required|integer|min:1',
-            'packing'=>'required',
+            'price'=>'required|numeric'
         ]);
 
         if($validator->fails()){
