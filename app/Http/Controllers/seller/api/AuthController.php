@@ -394,16 +394,33 @@ class AuthController extends Controller
                 if ($request->has('docs')) {
                     $user->docs = $this->sellerUploadmultiFile($request->name, $request->docs, 'docs');
                 }
-                $user->type_cource = $request->on_of;
-                $user->work_space = $request->work_space;
-                $user->location = $request->location;
-                $user->price = $request->price;
-                $user->price_type = $request->price_type;
-                $user->Specialization = $request->Specialization;
-                $user->min_num_trainees = $request->min_num_trainees;
-                $user->start_date = $request->start_date;
-                $user->end_date = $request->end_date;
-                $user->bio = $request->bio;
+                if ($request->has('on_of')){
+                    $user->type_cource = $request->on_of;
+                }
+                if ($request->has('work_space')){
+                    $user->work_space = $request->work_space;
+                }
+                if ($request->has('location')){
+                    $user->location = $request->location;
+                }
+                if ($request->has('price')){
+                    $user->price = $request->price;
+                }
+                if ($request->has('price_type')){
+                    $user->price_type = $request->price_type;
+                }if ($request->has('Specialization')){
+                    $user->Specialization = $request->Specialization;
+                }if ($request->has('min_num_trainees')){
+                    $user->min_num_trainees = $request->min_num_trainees;
+                }
+                if ($request->has('start_date')){
+                    $user->start_date = $request->start_date;
+                }
+                if ($request->has('end_date')){
+                    $user->end_date = $request->end_date;
+                }if ($request->has('bio')) {
+                    $user->bio = $request->bio;
+                }
             }
         }
         if ($request->password != null){
