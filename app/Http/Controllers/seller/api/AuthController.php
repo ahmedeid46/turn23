@@ -369,7 +369,7 @@ class AuthController extends Controller
         if ($request->has('cats')){
             $user->cat_id =  json_encode($request->cats);
         }
-        foreach (auth('seller-api')->user()->cat_id as $cat){
+        foreach (json_decode(auth('seller-api')->user()->cat_id) as $cat){
             if ($cat < 4) {
                 if ($request->hasFile('registration_certificate')) {
                     $user->registration_certificate = $this->sellerUploadFile($request->name, $request->registration_certificate, 'registration');
