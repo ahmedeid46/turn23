@@ -46,7 +46,7 @@ class OrderController extends Controller
             $price = new OrderPrice;
             $price->admin_order_id = $request->admin_order_id;
             $price->price = $request->price;
-            $price->pay_method = $request->pay_method;
+            $price->payment_method = $request->pay_method;
             $price->payment_day = $request->payment_day;
             if ($request->hasFile('coa')){
                 $price->coa = $this->orderUploadFile('ind_',$request->coa,'coa');

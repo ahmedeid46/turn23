@@ -10,6 +10,7 @@ use App\Models\IndProduct;
 use App\Models\Product;
 use App\Traits\APITrait;
 use App\Traits\UploadFiles;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
@@ -71,8 +72,7 @@ class IndProductController extends Controller
             'product_id'=>'required',
             'all_product_id'=>'required',
             'price'=>'required|numeric',
-            'qty'=>'required|integer|min:1',
-            'packing'=>'required'
+
         ]);
 
         if($validator->fails()){
